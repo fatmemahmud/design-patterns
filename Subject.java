@@ -11,10 +11,10 @@ public void setState(int state) {
       this.state = state;
       notifyAllObservers();
    }
-public void attach(Observer observer){
+public void removeObserver(Observer observer){
       observers.add(observer);  
    }
-public void notifyAllObservers(){
+public void addObservers(){
       for (Observer observer : observers) {
          observer.update();
       }
